@@ -1,3 +1,5 @@
+# 06 j3
+
 s1 = 'adgjmptw'
 s2 = 'behknqux'
 s3 = 'cfilorvy'

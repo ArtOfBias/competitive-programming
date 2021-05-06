@@ -1,3 +1,5 @@
+// 05 j3
+
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -9,7 +11,7 @@ int main(){
 
     locations.push_back("HOME");
 
-    while (true) {
+    while (true){
         cin >> turn;
         cin >> location;
         if (turn == "R") turn = "LEFT";

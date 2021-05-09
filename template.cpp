@@ -1,4 +1,4 @@
-// 96 s2
+// year problem
 
 #include <bits/stdc++.h>
 
@@ -13,6 +13,4 @@ int main(){
     
 
     // ================================
-    
-    return 0;
 }

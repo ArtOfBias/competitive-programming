@@ -33,12 +33,12 @@ int main(){
             if (cars[i] == nextCar){
                 nextCar++;
             }
-            else if (branch.top() == nextCar){
-                nextCar++;
-                branch.pop();
-            }
             else {
                 branch.push(cars[i]);
+            }
+            while (branch.top() == nextCar){
+                nextCar++;
+                branch.pop();
             }
         }
 

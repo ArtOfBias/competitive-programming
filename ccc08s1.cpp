@@ -13,15 +13,13 @@ int main(){
     string city, coldestCity;
     int temperature, coldestTemp;
 
-    cin >> city;
-    cin >> temperature;
+    cin >> city >> temperature;
 
     coldestCity = city;
     coldestTemp = temperature;
 
     while (city != "Waterloo"){
-        cin >> city;
-        cin >> temperature;
+        cin >> city >> temperature;
         
         if (temperature < coldestTemp){
             coldestCity = city;

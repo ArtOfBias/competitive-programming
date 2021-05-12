@@ -1,10 +1,6 @@
-main.exe
-
 *
 
 !main.cpp
 !ccc*
 !.gitignore
 !template.cpp
-
-main.exe

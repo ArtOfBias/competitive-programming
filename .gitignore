@@ -1,6 +1,7 @@
 *
 
-!main.cpp
-!ccc*
 !.gitignore
 !template.cpp
+!main.cpp
+!dmoj/**
+!*/

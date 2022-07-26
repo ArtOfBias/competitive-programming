@@ -6,53 +6,64 @@ typedef long long ll;
 
 using namespace std;
 
+void solve(){
+    //  ================================
+
+    int n, k;
+    cin >> n >> k;
+
+    map<ll, pair<int, int>> stations;
+    ll temp;
+
+    for (int i = 0; i < n; i++){
+        cin >> temp;
+        if (stations.find(temp) == stations.end()){
+            stations[temp] = make_pair(i,i);
+        }
+        else {
+            stations[temp].second = i;
+        }
+    }
+
+    bool ok;
+    ll a, b;
+    for (int i = 0; i < k; i++){
+        cin >> a >> b;
+        if (stations.find(a) == stations.end()){
+            ok = false;
+        }
+        else if (stations.find(b) == stations.end()){
+            ok = false;
+        }
+        else {
+            if (stations[a].first < stations[b].second){
+                ok = true;
+            }
+            else {
+                ok = false;
+            }
+        }
+        if (ok){
+            cout << "YES\n";
+        }
+        else {
+            cout << "NO\n";
+        }
+    }
+
+    //  ================================
+}
+
 int main(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    //  ================================
 
-    int t;
-    cin >> t;
+    ll incount;
+    cin >> incount;
 
-    ll n,k;
-    vector<ll> stations;
-    ll stats, state;
-    ll inp;
-
-
-    for (int i = 0; i < t; i++){
-        cin >> n >> k;
-        for (ll j = 0; j < n; j++){
-            cin >> inp;
-            if (j > 0 && inp == stations.back()){
-            }
-            else {
-                stations.push_back(inp);
-            }
-        }
-        for (ll j = 0; j < k; j++){
-            cin >> stats >> state;
-
-            auto it = find(stations.begin(), stations.end(), stats);
-
-            if (it != stations.end()){
-                auto it2 = find(it, stations.end(), state);
-
-                if (it2 != stations.end()){
-                    cout << "YES\n";
-                }
-                else {
-                    cout << "NO\n";
-                }
-            }
-            else {
-                cout << "NO\n";
-            }
-        }
-
-        stations.clear();
+    for (int i = 0; i < incount; i++){
+        solve();
     }
 
-    //  ================================
 }
